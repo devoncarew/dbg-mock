@@ -1,0 +1,20 @@
+{
+  "name": "dbg-ui",
+  "main": "./lib/dbg-ui",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "dbg-ui:debugger-ui",
+    "atom-workspace": "dbg-ui:console-ui"
+  },
+  "repository": "https://github.com/atom/dbg-ui",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "rivets": "^0.8.1"
+  }
+}

@@ -1,0 +1,126 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+
+@import "ui-variables";
+
+.dbg-ui {
+}
+
+.console-ui {
+
+}
+
+.console-ui .panel-heading {
+  text-shadow: none;
+}
+
+.console-ui .console-header {
+  vertical-align: middle;
+}
+
+.console-ui .panel-heading .close-icon::before {
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+  content: "\f081";
+}
+
+.console-ui .panel-heading .close-icon {
+  opacity: 0.8;
+}
+
+.console-ui .panel-heading .close-icon:hover {
+  opacity: 1;
+}
+
+.console-ui .panel-body {
+  white-space: pre;
+  height: 140px;
+  overflow: auto;
+  font-family: Inconsolata, Monaco, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+.debugger-ui {
+  width: 280px;
+}
+
+.debugger-ui .debugger-section {
+  padding: @component-padding;
+  border-bottom: 1px solid @tool-panel-border-color;
+  background-color: @tool-panel-background-color;
+}
+
+/*.debugger-ui .selected:before {
+  background-color: #444;
+}*/
+
+.debugger-ui .debugger-section.compact {
+  padding: 4px;
+}
+
+.debugger-ui .panel-heading {
+  text-shadow: none;
+}
+
+.debugger-ui .icon::before {
+  margin-right: 0;
+}
+
+.debugger-ui .debugger-section.last {
+  border-bottom: none;
+}
+
+.debugger-ui .select-container {
+  margin-top: -7px;
+  margin-left: -7px;
+  margin-right: -7px;
+}
+
+.debugger-ui select.form-control {
+  color: #aaaaaa;
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: #43484d;
+}
+
+.debugger-ui .form-control {
+  display: block;
+  width: 100%;
+  height: 26px;
+  padding: 6px 0px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.debugger-ui .list-group {
+  margin-left: 16px;
+  overflow-y: auto;
+  max-height: 140px;
+}
+
+.debugger-ui .var-list {
+  overflow-y: auto;
+}
+
+.debugger-ui .eval-contents {
+  overflow-y: auto;
+  margin-bottom: 10px;
+}

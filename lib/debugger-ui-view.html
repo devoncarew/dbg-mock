@@ -1,0 +1,146 @@
+<atom-panel class='model debugger-ui' layout vertical>
+  <div class="debugger-section debugger-header compact">
+    <div class='btn-toolbar'>
+      <div class='btn-group'>
+        <button class='btn icon icon-playback-play'></button>
+        <button class='btn icon icon-playback-pause'></button>
+      </div>
+
+      <div class='btn-group'>
+        <button class='btn icon icon-move-down'></button>
+        <button class='btn icon icon-move-right'></button>
+        <button class='btn icon icon-move-up'></button>
+      </div>
+
+      <div class='btn-group'>
+        <button class='btn icon icon-primitive-square'></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="debugger-section compact">
+    <div class="badge badge-info pull-right">120 fps</div>
+  </div>
+
+  <div class="debugger-section">
+    <div class="select-container focusable-container">
+      <select class="form-control">
+        <option value="atom-dark-ui">isolate-main</option>
+        <option value="atom-light-ui">isolate-1</option>
+        <option value="darkmatter-theme">isolate-3</option>
+        <option value="one-dark-ui">isolate-4</option>
+        <option value="one-light-ui">isolate-7</option>
+      </select>
+    </div>
+
+    <ul class='list-group focusable-container'>
+      <li class='list-item'>
+        <i class='icon icon-file-media'></i>
+        <span>FooBar._catImpl()</span>
+      </li>
+
+      <li class='list-item'>
+        <i class='icon icon-file-media'></i>
+        <span>FooBar.cats()</span>
+      </li>
+
+      <li class='list-item'>
+        <i class='icon icon-file-media'></i>
+        <span>FooBar()</span>
+      </li>
+
+      <li class='list-item'>
+        <i class='icon icon-file-symlink-file'></i>
+        <span>_startup()</span>
+      </li>
+
+      <li class='list-item'>
+        <i class='icon icon-file-symlink-file'></i>
+        <span>main()</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- TODO: stack variables -->
+
+  <div class="debugger-section var-list" flex>
+
+    <ul class='list-tree has-collapsable-children'>
+        <li class='list-nested-item'>
+          <div class='list-item'>
+            <i class="icon icon-primitive-dot"></i>
+            <span>this</span>
+          </div>
+
+          <ul class='list-tree'>
+            <li class='list-nested-item'>
+              <div class='list-item'>
+                <i class="icon icon-primitive-dot"></i>
+                <span>car</span> <span class="text-muted">"[String 87190]"</span>
+              </div>
+
+              <ul class='list-tree'>
+                <li class='list-item'>
+                  <i class="icon icon-primitive-dot"></i>
+                  <span>title</span> <span class="text-muted">"Mini Cooper"</span>
+                </li>
+              </ul>
+            </li>
+
+            <li class='list-nested-item collapsed'>
+              <div class='list-item'>
+                <i class="icon icon-primitive-dot"></i>
+                <span>garage</span>
+              </div>
+
+              <ul class='list-tree'>
+                <li class='list-item'>
+                  <i class="icon icon-primitive-dot"></i>
+                  <span>tireIron</span> <span class="text-muted">123</span>
+                </li>
+              </ul>
+            </li>
+
+            <li class='list-item'>
+              <i class="icon icon-primitive-dot"></i>
+              <span>airGauge</span> <span class="text-muted">0.2</span>
+            </li>
+
+            <li class='list-item'>
+              <i class="icon icon-primitive-dot"></i>
+              <span>tmp</span> <span class="text-muted">"baz"</span>
+            </li>
+          </ul>
+      </li>
+
+      <li class='list-item'>
+        <i class="icon icon-primitive-dot"></i>
+        <span>.icon-file-text</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- TODO: eval area -->
+
+  <div class="debugger-section last" flex layout vertical>
+    <div flex class="eval-contents">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <br><br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+
+    <atom-text-editor class="editor mini" tabindex="-1" callattachhooks="true"
+        mini="" placeholder-text="foo.bar()"
+        data-grammar="text plain null-grammar" data-encoding="utf8"></atom-text-editor>
+  </div>
+</atom-panel>

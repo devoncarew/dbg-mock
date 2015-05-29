@@ -1,0 +1,18 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Sky'
+      'submenu': [
+        {
+          'label': 'Toggle Console'
+          'command': 'dbg-ui:console-ui'
+        }, {
+          'label': 'Toggle Debugger'
+          'command': 'dbg-ui:debugger-ui'
+        }
+      ]
+    ]
+  }
+]
