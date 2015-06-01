@@ -1,25 +1,42 @@
 <atom-panel class='model debugger-ui' layout vertical>
-  <div class="debugger-section debugger-header compact">
-    <div class='btn-toolbar'>
-      <div class='btn-group'>
-        <button class='btn icon icon-playback-play'></button>
-        <button class='btn icon icon-playback-pause'></button>
-      </div>
+  <div class="panel-heading" layout horizontal center>
+    <div class="badge badge-success inline-block">Sky launch</div>
+    <div class="inline-block console-header">foo.dart</div>
+    <div class="inline-block" flex></div>
+    <div class="icon icon-link-external inline-block icon-flipped"></div>
+  </div>
 
-      <div class='btn-group'>
-        <button class='btn icon icon-move-down'></button>
-        <button class='btn icon icon-move-right'></button>
-        <button class='btn icon icon-move-up'></button>
-      </div>
-
-      <div class='btn-group'>
-        <button class='btn icon icon-primitive-square'></button>
-      </div>
+  <div class="debugger-section compact" layout horizontal>
+    <div class="btn-toolbar" layout horizontal flex center>
+      <div class="inline-block" flex></div>
+      <div class="badge badge-info">120 fps</div>
     </div>
   </div>
 
-  <div class="debugger-section compact">
-    <div class="badge badge-info pull-right">120 fps</div>
+  <div class="debugger-section compact" layout horizontal>
+    <div class="btn-toolbar" layout horizontal flex center>
+      <div class="inline-block">
+        <span class="icon icon-triangle-right small"></span>Changes
+      </div>
+
+      <div class="inline-block" flex></div>
+
+      <div class="badge badge-success">+7</div>
+      <button class='btn'> &gt;&gt; </button>
+    </div>
+  </div>
+
+  <div class="debugger-section debugger-header compact">
+    <div class='btn-toolbar' layout horizontal>
+      <button class='btn icon icon-playback-play inline-block-tight' flex></button>
+      <button class='btn icon icon-playback-pause inline-block' flex></button>
+
+      <button class='btn icon icon-chevron-down inline-block-tight' flex></button>
+      <button class='btn icon icon-chevron-right inline-block-tight' flex></button>
+      <button class='btn icon icon-chevron-up inline-block' flex></button>
+
+      <button class='btn icon icon-primitive-square' flex></button>
+    </div>
   </div>
 
   <div class="debugger-section">
@@ -76,7 +93,7 @@
             <li class='list-nested-item'>
               <div class='list-item'>
                 <i class="icon icon-primitive-dot"></i>
-                <span>car</span> <span class="text-muted">"[String 87190]"</span>
+                <span>car</span> <span class="text-muted">[String 87190]</span>
               </div>
 
               <ul class='list-tree'>
@@ -115,7 +132,7 @@
 
       <li class='list-item'>
         <i class="icon icon-primitive-dot"></i>
-        <span>.icon-file-text</span>
+        <span>.icon-file-text</span> <span class="text-muted">null</span>
       </li>
     </ul>
   </div>
@@ -123,21 +140,18 @@
   <!-- TODO: eval area -->
 
   <div class="debugger-section last" flex layout vertical>
-    <div flex class="eval-contents">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      <br><br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="btn-toolbar" layout horizontal center>
+      <div class="inline-block">
+        <span class="icon icon-triangle-down small"></span>Evaluate
+      </div>
+      <div class="inline-block" flex></div>
     </div>
+
+    <div flex class="eval-contents">
+foo = 123
+bar = "baz baz"
+…
+</div>
 
     <atom-text-editor class="editor mini" tabindex="-1" callattachhooks="true"
         mini="" placeholder-text="foo.bar()"

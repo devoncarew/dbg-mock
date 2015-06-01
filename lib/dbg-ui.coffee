@@ -15,17 +15,17 @@ module.exports = DbgUi =
     console.log('dbg-ui activate')
     @debuggerUiView = new DebuggerUiView(state.debuggerUiViewState)
     @debuggerPanel = atom.workspace.addRightPanel(
-      item: @debuggerUiView.getElement(), visible: true)
+      item: @debuggerUiView.getElement(), visible: false)
 
     @consoleUiView = new ConsoleUiView(state.consoleUiViewState)
     @consolePanel = atom.workspace.addBottomPanel(
-      item: @consoleUiView.getElement(), visible: true)
+      item: @consoleUiView.getElement(), visible: false)
 
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.commands.add 'atom-workspace', 'dbg-ui:debugger-ui': =>
       @toggleDebugger()
     @subscriptions.add atom.commands.add 'atom-workspace', 'dbg-ui:console-ui': =>
-      @toggleConsole()
+      @toggle()
 
   deactivate: ->
     @debuggerPanel.destroy()
@@ -48,3 +48,13 @@ module.exports = DbgUi =
       @consolePanel.hide()
     else
       @consolePanel.show()
+
+  toggle: ->
+    if not @consolePanel.isVisible() and not @debuggerPanel.isVisible()
+      @consolePanel.show()
+    else if @consolePanel.isVisible() and not @debuggerPanel.isVisible()
+      @debuggerPanel.show()
+    else if @consolePanel.isVisible() and @debuggerPanel.isVisible()
+      @consolePanel.hide()
+    else if not @consolePanel.isVisible() and @debuggerPanel.isVisible()
+      @debuggerPanel.hide()

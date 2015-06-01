@@ -17,7 +17,7 @@
 }
 
 .console-ui .console-header {
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
 
 .console-ui .panel-heading .close-icon::before {
@@ -67,11 +67,21 @@
   padding: 4px;
 }
 
+.debugger-ui .btn-toolbar {
+  margin-left: 0;
+}
+
+.debugger-ui .btn-toolbar > *:first-child {
+  margin-left: 0;
+}
+
 .debugger-ui .panel-heading {
   text-shadow: none;
 }
 
 .debugger-ui .icon::before {
+  padding-top: 1px;
+  line-height: inherit;
   margin-right: 0;
 }
 
@@ -86,28 +96,15 @@
 }
 
 .debugger-ui select.form-control {
-  color: #aaaaaa;
-  border-color: rgba(0, 0, 0, 0.5);
-  background-color: #43484d;
-}
-
-.debugger-ui .form-control {
-  display: block;
-  width: 100%;
-  height: 26px;
-  padding: 6px 0px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555555;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  color: @text-color;
+  border-color: @button-border-color;
+  background-color: @button-background-color;
+  height: 28px;
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    background-color: @button-background-color-hover;
+  }
 }
 
 .debugger-ui .list-group {
@@ -123,4 +120,10 @@
 .debugger-ui .eval-contents {
   overflow-y: auto;
   margin-bottom: 10px;
+  white-space: pre;
+  font-family: Inconsolata, Monaco, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+.icon-flipped {
+  transform: scaleX(-1) scaleY(-1);
 }
